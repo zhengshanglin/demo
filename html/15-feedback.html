@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>用药咨询页</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.2.0.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+</head>
+<body>
+
+    <section>
+
+        <div class="aui-content">
+            <ul class="aui-list aui-media-list">
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">叶先生   2016.12.08.  01：23：56</div>
+                    <p>&ensp;&ensp;李医生，我按照您的配方按时吃药，现在病情好了很多，非常感谢 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">公信网   2016.12.08.  02：13：32</div>
+                    <p>&ensp;&ensp;叶先生，请检查服药，这个疗程完后，一定会药到病除，祝早日康复 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">叶先生   2016.12.08.  01：23：56</div>
+                    <p>&ensp;&ensp;李医生，我按照您的配方按时吃药，现在病情好了很多，非常感谢 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">公信网   2016.12.08.  02：13：32</div>
+                    <p>&ensp;&ensp;叶先生，请检查服药，这个疗程完后，一定会药到病除，祝早日康复 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">叶先生   2016.12.08.  01：23：56</div>
+                    <p>&ensp;&ensp;李医生，我按照您的配方按时吃药，现在病情好了很多，非常感谢 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">公信网   2016.12.08.  02：13：32</div>
+                    <p>&ensp;&ensp;叶先生，请检查服药，这个疗程完后，一定会药到病除，祝早日康复 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">叶先生   2016.12.08.  01：23：56</div>
+                    <p>&ensp;&ensp;李医生，我按照您的配方按时吃药，现在病情好了很多，非常感谢 ！</p>
+                </li>
+                <li class="aui-list-item aui-padded-b-10">
+                    <div class="aui-list-item-title">公信网   2016.12.08.  02：13：32</div>
+                    <p>&ensp;&ensp;叶先生，请检查服药，这个疗程完后，一定会药到病除，祝早日康复 ！</p>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+<div class="aui-searchbar" id="search">
+    <div class="aui-searchbar-input aui-border-radius" tapmode="" onclick="doSearch()">
+        <i class="aui-iconfont aui-icon-search"></i>
+        <form action="javascript:search();">
+            <input placeholder="请输入搜索内容" id="search-input" type="search">
+        </form>
+    </div>
+    <div class="aui-searchbar-cancel" tapmod="" style="margin-right: 0px;">取消</div>
+</div>
+
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var searchBar = document.querySelector(".aui-searchbar-input");
+    if(searchBar){
+        searchBar.onclick = function(){
+            document.querySelector(".aui-searchbar-cancel").style.marginRight = 0;
+        }
+    }
+    document.querySelector(".aui-searchbar-cancel").onclick = function(){
+        this.style.marginRight = "-"+this.offsetWidth+"px";
+        document.getElementById("search-input").value = '';
+        document.getElementById("search-input").blur();
+    }
+    function doSearch(){
+        var searchValue = document.getElementById("search-input").value;
+        if(searchValue){
+            alert("您输入的内容是:"+searchValue);
+        }
+    }
+</script>
+</body>
+</html>
